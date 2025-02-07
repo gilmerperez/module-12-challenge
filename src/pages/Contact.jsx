@@ -55,7 +55,11 @@ function Form() {
 const Contact = () => {
   return (
     <div className="container py-5">
-      <h1 className="text-center mb-4">Contact Me</h1>
+      <h1 className="text-center mb-1">
+        Contact Me
+        <br />
+        <i class="fa-solid fa-envelope mt-3"></i>
+      </h1>
 
       <form>
         <div class="mb-3">

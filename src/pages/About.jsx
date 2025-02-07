@@ -5,7 +5,7 @@ const About = () => {
     <div className="container text-center py-5">
       <h1 className="text-center mb-4">About Me</h1>
 
-      <i class="fa-regular fa-user fa-5x mb-4"></i>
+      <i class="fa-solid fa-user fa-3x mb-4"></i>
 
       <div className="row justify-content-center">
         <div className="col-lg-6">

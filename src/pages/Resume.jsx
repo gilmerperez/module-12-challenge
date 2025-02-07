@@ -3,7 +3,12 @@ import React from "react";
 const Resume = () => {
   return (
     <div className="container py-5">
-      <h1 className="text-center mb-4">Resume</h1>
+      <h1 className="text-center mb-4">
+        Resume
+        <br />
+        <i class="fa-solid fa-file fa-1x mt-4"></i>
+        </h1>
+
 
       
       <div className="text-center border-bottom pb-3 mb-4">

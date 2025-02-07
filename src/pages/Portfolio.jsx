@@ -48,7 +48,11 @@ const Portfolio = () => {
 
   return (
     <div className="container py-5">
-      <h1 className="text-center mb-4">My Portfolio</h1>
+      <h1 className="text-center mb-4">
+        My Portfolio
+        <br />
+        <i class="fa-solid fa-briefcase mt-2"></i>
+      </h1>
 
       <div className="row">
         {portfolioItems.map((item, index) => (
