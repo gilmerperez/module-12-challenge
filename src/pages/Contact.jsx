@@ -1,24 +1,63 @@
-import React from 'react'
+import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact Me</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
-  )
-}
+    <form>
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" />
+      <a
+        href="/"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      />
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-1">Contact Me</span>
 
-export default Contact
+      <div class="mb-3">
+        <label for="name" class="form-label">
+          Name:
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">
+          Email Address:
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          placeholder="Enter your email"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">
+          Message
+        </label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="4"
+          placeholder="Enter your message"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </form>
+  );
+};
+
+export default Contact;
