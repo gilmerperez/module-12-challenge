@@ -17,11 +17,8 @@ const About = () => {
             ipsa quam ex repellat, nemo, veritatis rem, laborum optio qui
             ratione. Nulla velit voluptatem enim voluptatum, corrupti est eaque,
             deserunt eos placeat labore at deleniti esse laboriosam in dolorem
-            maxime sunt. Atque voluptate architecto ratione doloribus modi?
-            Quod nihil perferendis consequatur nemo, eaque unde deleniti
-            consequuntur hic, ab a impedit omnis aliquam esse voluptate
-            asperiores corrupti magnam ipsam porro blanditiis. Dicta facilis cum
-            odit.
+            maxime sunt. Alias molestias, expedita saepe, nesciunt porro
+            cupiditate.
           </p>
         </div>
       </div>
