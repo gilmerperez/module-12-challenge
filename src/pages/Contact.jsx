@@ -1,4 +1,52 @@
 import React from "react";
+import { useState } from "react";
+import { validateEmail } from "../utils/helpers";
+
+function Form() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [text, setText] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    if (inputType === name) {
+      setName(inputValue);
+    } else if (inputType === email) {
+      setEmail(inputValue);
+    } else if (inputType === text) {
+      setText(inputValue);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name) {
+      setErrorMessage('Please fill out name field');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is invalid');
+      return;
+    }
+
+    if (!text) {
+      setErrorMessage('Please fill out text field');
+      return;
+    }
+
+    alert("Thank you for filling out the form! I'll be in touch soon.")
+
+    setName('');
+    setEmail('');
+    setText('');
+  };
+}
 
 const Contact = () => {
   return (
