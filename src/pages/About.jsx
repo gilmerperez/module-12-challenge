@@ -5,13 +5,7 @@ const About = () => {
     <div className="container text-center py-5">
       <h1 className="text-center mb-4">About Me</h1>
 
-      <img
-        className="img-fluid rounded-circle mb-4"
-        src="C:\Users\gilme\WebDev\UCF Bootcamp\module-challenges\module-12-challenge\assets\project-images\9203764.png"
-        alt="Profile"
-        width="150"
-        height="150"
-      />
+      <i class="fa-regular fa-user fa-5x mb-4"></i>
 
       <div className="row justify-content-center">
         <div className="col-lg-6">
