@@ -1,16 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Error = () => {
   return (
-    <div id="error-page">
+    <div className="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{Error.statusText || Error.message}</i>
-      </p>
+      <p className="lead">Sorry, an unexpected error has occurred.</p>
+      <p className="text-muted"></p>
     </div>
-  )
-}
+  );
+};
 
-export default Error
-
+export default Error;
