@@ -6,64 +6,62 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [text, setText] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [text, setText] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+    const { name, value } = e.target;
 
-    if (inputType === 'name') {
-      setName(inputValue);
-    } else if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'text') {
-      setText(inputValue);
+    if (name === "name") {
+      setName(value);
+    } else if (name === "email") {
+      setEmail(value);
+    } else if (name === "text") {
+      setText(value);
     }
+
+    // Remove error message when user starts typing
+    setErrorMessage("");
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     if (!name) {
-      setErrorMessage('Please fill out name field');
+      setErrorMessage("Please fill out the Name field");
+      return;
+    } else if (!email) {
+      setErrorMessage("Please fill out the Email Address field");
+      return;
+    } else if (!validateEmail(email)) {
+      setErrorMessage("Email is invalid");
+      return;
+    } else if (!text) {
+      setErrorMessage("Please fill out the Message field");
       return;
     }
 
-    if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid');
-      return;
-    }
+    alert("Thank you for filling out the form! I'll be in touch soon.");
 
-    if (!text) {
-      setErrorMessage('Please fill out text field');
-      return;
-    }
-
-    alert("Thank you for filling out the form! I'll be in touch soon.")
-
-    setName('');
-    setEmail('');
-    setText('');
+    setName("");
+    setEmail("");
+    setText("");
   };
-}
 
-const Contact = () => {
   return (
     <div className="container py-5">
       <h1 className="text-center mb-1">
         Contact Me
         <br />
-        <i class="fa-solid fa-envelope mt-3"></i>
+        <i className="fa-solid fa-envelope mt-3"></i>
       </h1>
 
       <form className="form" onSubmit={handleFormSubmit}>
-        <div class="mb-3">
-          <label for="name" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">
             Name
           </label>
           <input
@@ -71,14 +69,14 @@ const Contact = () => {
             name="name"
             onChange={handleInputChange}
             type="text"
-            class="form-control"
+            className="form-control"
             id="name"
             placeholder="Enter your name"
           />
         </div>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
             Email Address
           </label>
           <input
@@ -86,37 +84,33 @@ const Contact = () => {
             name="email"
             onChange={handleInputChange}
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
-            aria-describedby="emailHelp"
             placeholder="Enter your email"
           />
         </div>
 
-        <div class="mb-3">
-          <label for="message" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="message" className="form-label">
             Message
           </label>
           <textarea
             value={text}
             name="text"
             onChange={handleInputChange}
-            class="form-control"
+            className="form-control"
             id="message"
             rows="4"
             placeholder="Enter your message"
           ></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">
+        {errorMessage && <p className="text-danger">{errorMessage}</p>}
+
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
     </div>
   );
 };
