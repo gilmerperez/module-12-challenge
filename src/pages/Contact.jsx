@@ -6,7 +6,7 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-function Form() {
+function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
@@ -17,11 +17,11 @@ function Form() {
     const inputType = target.name;
     const inputValue = target.value;
 
-    if (inputType === name) {
+    if (inputType === 'name') {
       setName(inputValue);
-    } else if (inputType === email) {
+    } else if (inputType === 'email') {
       setEmail(inputValue);
-    } else if (inputType === text) {
+    } else if (inputType === 'text') {
       setText(inputValue);
     }
   };
@@ -61,12 +61,15 @@ const Contact = () => {
         <i class="fa-solid fa-envelope mt-3"></i>
       </h1>
 
-      <form>
+      <form className="form" onSubmit={handleFormSubmit}>
         <div class="mb-3">
           <label for="name" class="form-label">
             Name
           </label>
           <input
+            value={name}
+            name="name"
+            onChange={handleInputChange}
             type="text"
             class="form-control"
             id="name"
@@ -79,6 +82,9 @@ const Contact = () => {
             Email Address
           </label>
           <input
+            value={email}
+            name="email"
+            onChange={handleInputChange}
             type="email"
             class="form-control"
             id="email"
@@ -92,6 +98,9 @@ const Contact = () => {
             Message
           </label>
           <textarea
+            value={text}
+            name="text"
+            onChange={handleInputChange}
             class="form-control"
             id="message"
             rows="4"
@@ -103,6 +112,11 @@ const Contact = () => {
           Submit
         </button>
       </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
     </div>
   );
 };
