@@ -5,7 +5,7 @@ const Navigation = () => {
   const currentPage = useLocation().pathname;
 
   return (
-    <ul className="nav ">
+    <ul className="nav nav-tabs">
       <li className="nav-item">
         <Link to="/" className={currentPage === "/" ? "nav-link active" : "nav-link"}>About</Link>
       </li>
