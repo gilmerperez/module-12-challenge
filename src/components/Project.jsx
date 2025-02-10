@@ -1,11 +1,11 @@
 import React from "react";
 
-import brutallyMinimal from "src\images\brutally-minimal.jpg";
-import landingPage from "src\images\landing-page.jpg";
-import colorPaletteGenerator from "src\images\color-palette-generator.jpg";
-import moodBoard from "src\images\mood-board.jpg";
-import cssSnippetCheatSheet from "src\images\css-snippet-cheatsheet.jpg";
-import rockPaperScissors from "src\images\rock-paper-scissors.jpg";
+import brutallyMinimal from "../images/brutally-minimal.jpg";
+import landingPage from "../images/landing-page.jpg";
+import colorPaletteGenerator from "../images/color-palette-generator.jpg";
+import moodBoard from "../images/mood-board.jpg";
+import cssSnippetCheatSheet from "../images/css-snippet-cheatsheet.jpg";
+import rockPaperScissors from "../images/rock-paper-scissors.jpg";
 
 const projects = [
   {
