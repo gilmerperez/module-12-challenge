@@ -72,3 +72,4 @@ const Project = ({ project }) => {
 
 export { projects }; // Exporting the projects array for use in Portfolio.jsx
 export default Project;
+
