@@ -1,11 +1,9 @@
-import React from 'react'
-
 const About = () => {
   return (
     <div className="container text-center py-5">
       <h1 className="text-center mb-4">About Me</h1>
 
-      <i class="fa-solid fa-user fa-3x mb-4"></i>
+      <i className="fa-solid fa-user fa-3x mb-4"></i>
 
       <div className="row justify-content-center">
         <div className="col-lg-6">

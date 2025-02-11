@@ -1,5 +1,3 @@
-import React from "react";
-
 import brutallyMinimal from "../images/brutally-minimal.jpg";
 import landingPage from "../images/landing-page.jpg";
 import colorPaletteGenerator from "../images/color-palette-generator.jpg";

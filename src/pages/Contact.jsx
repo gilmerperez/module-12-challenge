@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 function validateEmail(email) {
@@ -23,7 +22,6 @@ const Contact = () => {
       setText(value);
     }
 
-    // Remove error message when user starts typing
     setErrorMessage("");
   };
 
