@@ -8,20 +8,17 @@ const About = () => {
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <p className="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            blanditiis cumque. Alias molestias, expedita saepe, nesciunt porro
-            cupiditate, nostrum magnam quia aliquam at et unde. Accusantium et
-            nam necessitatibus minima eius commodi suscipit nostrum? Id quas
-            ipsa quam ex repellat, nemo, veritatis rem, laborum optio qui
-            ratione. Nulla velit voluptatem enim voluptatum, corrupti est eaque,
-            deserunt eos placeat labore at deleniti esse laboriosam in dolorem
-            maxime sunt. Alias molestias, expedita saepe, nesciunt porro
-            cupiditate.
+            Hi, I am Gilmer Perez, a 22-year-old student learning website
+            development in Orlando, FL. I have experience with HTML, CSS,
+            JavaScript, TypeScript, Web APIs, Node.js, PostgreSQL, and React.
+            Passionate about building dynamic and responsive web applications, I
+            am constantly improving my skills and exploring new technologies to
+            enhance my development expertise.
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default About
