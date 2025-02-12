@@ -7,7 +7,17 @@ const Resume = () => {
         <i className="fa-solid fa-file fa-1x mt-4"></i>
         </h1>
 
-
+      {/* Download Resume Button */}
+      <div className="text-center mb-4">
+        <a
+          href="https://docs.google.com/document/d/1npDkxPIVvVO25jjsW1ox_uOW5Bxid0n0Y8UJG6Fd_k4/edit?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+        >
+          Download Resume
+        </a>
+      </div>
       
       <div className="text-center border-bottom pb-3 mb-4">
         <h2 className="fw-bold">Gilmer Perez</h2>
