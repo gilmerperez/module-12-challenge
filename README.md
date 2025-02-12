@@ -47,7 +47,7 @@ To start the React portfolio project, follow these steps:
 
 The following animation shows the web application's appearance and functionality:
 
-![Screenshot](./assets/portfolioSC.jpg)
+![Screenshot](./src/images/portfolioSC.jpg)
 
 ## Instructions
 
@@ -97,6 +97,8 @@ This project relies on the following tools and technologies:
 - **Netlify**: Used for deploying the portfolio to the web, making it accessible online.
 
 ## Additional Resources
+
+- **The URL of the deployed application:** [Netlify Link](https://gilmerperez-react-portfolio.netlify.app/)
 
 - **React Documentation**: [React Docs](https://reactjs.org/docs/getting-started.html) - Learn how to use React effectively.
 
